@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.road{
+    width: 100%;
+    height: 10px;
+    background: black;
+    position: absolute;
+    top:600px;
+}
+.sky{
+    width: 400px;
+    animation-name: sky;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+.img{
+    width: 300px;
+    animation-name: car;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    position: fixed;
+    top: 400px;
+}
+.sun{
+    width: 200px;
+    height: 200px;
+    animation-name: sun;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    position: fixed;
+    top: 50px;
+    left: 1600px;
+    z-index: 1;
+}
+@keyframes sun{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(720deg);
+    }
+}
+.ball{
+    width: 100px;
+    animation-name: ball;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    position: fixed;
+    top: 510px;
+    left: 900px;
+    border-radius: 50%;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+}
+@keyframes car{
+    0%{
+        transform: translateX(-15vw);
+    }
+    100%{
+        transform: translateX(105vw);
+    }
+}
+@keyframes ball{
+    0%{
+        transform: translateY(0vh);
+    }
+    50%{
+        transform: translateY(-20vh);
+    }
+    100%{
+        transform: translateY(0vh);
+    }
+}
+@keyframes sky{
+    0%{
+        transform: translateX(-25vw);
+    }
+    20%{
+        /* transform: translateY( 70px);  */
+        margin-top: 70px;
+    }
+    40%{
+        /* transform: translateY( 0px);  */
+        margin-top: 0px;
+    }
+    60%{
+        /* transform: translateY( 70px);  */
+        margin-top: 70px;
+    }
+    80%{
+        /* transform: translateY( 0px);  */
+        margin-top: 0px;
+    }
+    100%{
+        transform: translateX(105vw);
+    }
+}
